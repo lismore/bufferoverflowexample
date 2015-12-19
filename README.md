@@ -24,7 +24,7 @@ Buffer Overflows in software are often exploited through a technique of using NO
                    ----------
                    
   
-Each process has is allocated its own stack
+Each process is allocated its own stack
 
 Each function ia given its own stack frame
 
