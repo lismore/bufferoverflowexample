@@ -24,3 +24,20 @@ Buffer Overflows in software are often exploited through a technique of using NO
                    ----------
                    
   
+Each process has is allocated its own stack
+Each function ia given its own stack frame
+
+Stack Registers:
+
+• The Extended Base Pointer (EBP) is the Base Address of current stack frame
+• The Extended Stack Pointer (ESP) is the Address of Top of the stack
+
+    Lower Memory Address                                                              Higher Memory Address
+    0x00000000                                                                                   0xfffffff0
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    |                                       |                                      |
+    |               UNUSED                  |           Stack Frame                |
+    |                                       |                                      |
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                            ESP                                   EBP
+                             
