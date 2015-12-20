@@ -46,3 +46,22 @@ Stack Registers:
     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                                             ESP                                   EBP
                              
+
+Applications or Processes in Memory
+
+>   .text Section: This holds machine instructions of the program and it is read only
+
+>   .data/.bss Sections: Global program variables, this is fixed size
+
+>   Heap Section: The heap is holds dynamically allocated program variables - goes from lower memory address to higher.
+
+>   Stack Section: Program Function calls and local variables – goes from higher memory address to lower.
+
+    Lower Memory Address                                                              Higher Memory Address
+    0x00000000                                                                                   0xfffffff0
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    |        |       |      |                  |                                      |                   |
+    | .text  | .data | .bss |       Heap       | -->           UNUSED             <-- |       Stack       |
+    |        |       |      |                  |                                      |                   |
+    *******************************************************************************************************
+    
